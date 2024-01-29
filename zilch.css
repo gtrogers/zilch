@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+hr {
+  flex-basis: 100%;
+}
+
+html {
+  --content: 65ch;
+  --light: #f8f8f8;
+  --dark: #202022;
+  --break: 400px;
+  --font-family: serif;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--light);
+    background-color: var(--dark);
+  }
+}
+
+h1,
+h2,
+h3 {
+  display: block;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 3em;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin-top: 1.8em;
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-top: 0.8em;
+}
+
+hr {
+  color: inherit;
+}
+
+@media (max-width: 400px) {
+  nav {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+nav {
+  ul {
+    max-width: var(--content);
+    list-style: none;
+    margin: 0 auto;
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: left;
+    li {
+      padding: 0 2em;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          border-bottom: solid 2px red;
+        }
+      }
+    }
+  }
+}
+
+article {
+  margin: 0 auto;
+}
+
+section {
+  display: flex;
+  max-width: var(--content);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div {
+    width: 48%;
+  }
+
+  @media (max-width: 400px) {
+    div {
+      width: 100%;
+    }
+  }
+}
+
+em {
+  display: inline;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-style: normal;
+  padding: 0;
+  padding-right: 0.25em;
+}
+
+p {
+  margin: 0.6em 0;
+  line-height: 1.35;
+}
+
+/* NB - this rellies on a preceding p element to push the 0 width asside to the right
+        of the flex container */
+aside {
+  position: relative;
+  p {
+    width: calc(var(--content) / 3);
+    position: absolute;
+    font-style: italic;
+    font-size: 0.9em;
+    left: 1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  aside {
+    position: static;
+    flex-basis: 100%;
+    margin-left: 1em;
+    padding-left: 1em;
+    p {
+        width: 100%;
+        position: static;
+    }
+  }
+}
