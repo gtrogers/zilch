@@ -18,6 +18,27 @@ and link to it in your HTML file
 
 Coming soon...
 
+## Theme
+
+Include a short `style` element in your HTML to set some basic CSS variables and, optionally, define a [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face).
+
+```HTML
+<style>
+    @font-face {
+        font-family: "some-font";
+        src: url("/path/to/some-font");
+    }
+
+    body {
+        --font-family: "some-font";
+        --light: #f8f8f8;
+        --dark: #202022;
+        --active: "";
+        --tint: "";
+    }
+</style>
+```
+
 ## Documentation
 
 See: tk_website
