@@ -6,6 +6,7 @@ h1,
 h2,
 h3,
 p,
+pre,
 hr {
   flex-basis: 100%;
 }
@@ -78,7 +79,7 @@ nav {
     justify-content: space-between;
     align-items: left;
     li {
-      padding: 0 2em;
+      padding: 0;
       text-align: center;
       a {
         text-decoration: none;
@@ -122,7 +123,7 @@ em {
   padding-right: 0.25em;
 }
 
-p {
+p, pre {
   margin: 0.6em 0;
   line-height: 1.35;
 }
