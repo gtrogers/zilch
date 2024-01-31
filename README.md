@@ -33,12 +33,12 @@ Include a short `style` element in your HTML to set some basic CSS variables and
         --font-family: "some-font";
         --light: #f8f8f8;
         --dark: #202022;
-        --active: "";
-        --tint: "";
+        --interactive-light: "";
+        --interactive-dark: "";
     }
 </style>
 ```
 
 ## Documentation
 
-See: tk_website
+See [the website](https://gtrogers.github.io/zilch/#the-basics)

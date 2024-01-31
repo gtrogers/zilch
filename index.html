@@ -1,52 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zilch CSS</title>
-    <meta name="description" content="Zilch is a zero class CSS framework for building readable websites that ❤️ semantic HTML.">
-</head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-<style>
+    <meta
+      name="description"
+      content="Zilch is a zero class CSS framework for building readable websites that ❤️ semantic HTML."
+    />
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <style>
     body {
-        --font-family: "DM Serif Text", serif;
+      --font-family: "DM Serif Text", serif;
     }
-</style>
-<body>
+  </style>
+  <body>
     <nav>
-        <ul>
-            <li><a href="/">Zilch</a></li>
-            <li><a href="https://github.com/gtrogers/zilch">GitHub</a></li>
-        </ul>
+      <ul>
+        <li><a href="/">Zilch</a></li>
+        <li><a href="https://github.com/gtrogers/zilch">GitHub</a></li>
+      </ul>
     </nav>
     <article>
-        <section>
-            <h1>Zilch CSS</h1>
-            <h2>Zero classes, beautiful websites</h2>
-            <p>Zilch is a zero class CSS framework for building readable websites that ❤️ semantic HTML.</p>
-            <p>This project is currently for my own use and enjoyment, but if anyone stumbles across it and finds it useful please let me know.</p>
-        </section>
-        <section>
-            <h2 id="components">Components</h2>
-            <h3>Navigation</h3>
-            <p>Use a <code>nav</code> element to contain your site navigation. Inside that add a <code>ul</code> to contain the links, each link should be inside a seperate <code>li</code>.</p>
-            <pre>
+      <section>
+        <h1>Zilch CSS</h1>
+        <h2>Zero classes, beautiful websites</h2>
+        <p>
+          Zilch is a zero class CSS framework for building readable websites
+          that ❤️ semantic HTML.
+        </p>
+        <p>
+          This project is currently for my own use and enjoyment, but if anyone
+          stumbles across it and finds it useful please let me know.
+        </p>
+      </section>
+      <section>
+        <h2 id="installation">Installation</h2>
+        <p>
+          Download the <a href="zilch.css">zilch.css</a> file and add it to your
+          project.
+        </p>
+        <pre>&lt;link rel="stylesheet" href="zilch.css"&gt;</pre>
+      </section>
+      <section>
+        <h2 id="the-basics">The Basics</h2>
+        <p>
+          Put your main content inside an <code>article</code> and break that
+          content up into <code>sections</code>. Inside each section use
+          <code>p</code> (paragraph) tags for text content. You can also use
+          <code>ul</code>, <code>ol</code>, <code>pre</code>, <code>img</code>,
+          etc.
+        </p>
+        <p>
+          Zilch supports<sup>*</sup> three levels of headings. A single
+          <code>h1</code> element at the top of your page,
+          <code>h2</code> elements for section headings and <code>h3</code> for
+          sub-sections.
+        </p>
+        <aside>
+          <p>
+            <em>*</em>Deliberately, more headings will likely make your page
+            more confusing and harder to navigate.
+          </p>
+        </aside>
+        <pre>
+&lt;article&gt;
+    &lt;section&gt;
+        &lt;h1&gt;My Awesome Website!&lt;/h1&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;About&lt;/h2&gt;
+        &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/article&gt;</pre
+        >
+      </section>
+      <section>
+        <h2 id="components">Components</h2>
+        <h3>Navigation</h3>
+        <p>
+          Use a <code>nav</code> element to contain your site navigation. Inside
+          that add a <code>ul</code> to contain the links, each link should be
+          inside a separate <code>li</code>.
+        </p>
+        <pre>
 &lt;nav&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-&lt;/nav&gt;</pre>
-            <h3>Headings</h3>
-            <p>Zilch supports<sup>*</sup> three levels of headings. A single <code>h1</code> element at the top of your page, <code>h2</code> elements for section headings and <code>h3</code> for sub-sections.</p>
-            <aside><p><em>*</em>Deliberately, more headings will likely make your page more confusing and harder to navigate.</p></aside>
-            <h3>Columns</h3>
-            <p>Docs coming soon...</p>
-        </section>
+&lt;/nav&gt;</pre
+        >
+        <h3>Page notes</h3>
+        <p>To add page notes<sup>*</sup> wrap a <code>p</code> tag inside an <code>aside</code>. Make sure the <code>aside</code> isn't nested inside another <code>p</code> tag. In other words, put your page note after the relevant paragraph and not inside of it.</code></p>
+        <aside><p><em>*</em> These things.</p></aside>
+        <pre>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;aside&gt;
+    &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;/aside&gt;</pre>
+        <h3>Columns</h3>
+        <p>Any <code>div</code> inside of a <code>section</code> is used to create a column. Zilch only supports two columns (or no/single columns).</p>
+        <pre>
+&lt;section&gt;
+    &lt;div&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</pre>
+      </section>
     </article>
-    <link rel="stylesheet" href="zilch.css">
-</body>
+    <link rel="stylesheet" href="zilch.css" />
+  </body>
 </html>

@@ -15,6 +15,8 @@ html {
   --content: 65ch;
   --light: #f8f8f8;
   --dark: #202022;
+  --interactive-dark: #C7B0DF;
+  --interactive-light: #ffebc2;
   --break: 400px;
   --font-family: serif;
   font-size: 16px;
@@ -24,12 +26,14 @@ body {
   font-family: var(--font-family);
   color: var(--dark);
   background-color: var(--light);
+  --interactive: var(--interactive-light);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     color: var(--light);
     background-color: var(--dark);
+    --interactive: var(--interactive-dark);
   }
 }
 
@@ -85,7 +89,7 @@ nav {
         text-decoration: none;
         color: inherit;
         &:hover {
-          border-bottom: solid 2px red;
+          border-bottom: solid 2px var(--interactive);
         }
       }
     }
@@ -126,6 +130,20 @@ em {
 p, pre {
   margin: 0.6em 0;
   line-height: 1.35;
+}
+
+pre {
+  overflow: scroll;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--interactive);
+}
+
+
+code {
+  font-size: 0.8rem;
 }
 
 /* NB - this rellies on a preceding p element to push the 0 width asside to the right
