@@ -16,7 +16,7 @@ and link to it in your HTML file
 
 ### CDN
 
-Coming soon...
+<link href="https://cdn.jsdelivr.net/gh/gtrogers/zilch@0.0.1/zilch.css" rel="stylesheet" />
 
 ## Theme
 
