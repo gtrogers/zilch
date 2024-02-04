@@ -178,3 +178,15 @@ aside {
     }
   }
 }
+
+footer {
+  font-size: 1rem;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 4em 0 1em 0;
+
+  small {
+    display: block;
+    text-align: center;
+  }
+}
